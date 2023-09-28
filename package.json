@@ -24,7 +24,10 @@
         "passport-jwt": "^4.0.0",
         "passport-local": "^1.0.0"
     },
+    "devDependencies": {
+        "react-scripts": "^5.0.0"
+    },
     "engines": {
-        "node": "20.7.0"
+        "node": "14"
     }
 }
