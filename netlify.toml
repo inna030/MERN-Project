@@ -1,0 +1,9 @@
+[build]
+  command = "npm run build"
+  publish = "build"
+[build.environment]
+  REACT_APP_API_KEY = "PASSPORT_SECRET"
+  REACT_APP_API_URL = "I like pandas and dogs"
+  MONGODB_URI = "mongodb+srv://778899:778899@cluster0.hfua7ey.mongodb.net/?retryWrites=true&w=majority"
+  MONGODB_USERNAME = "778899"
+  MONGODB_PASSWORD = "778899"
