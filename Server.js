@@ -12,12 +12,15 @@ const path = require("path");
 const port = process.env.PORT || 8080;
 // 連結MongoDB
 mongoose
-  .connect(process.env.MONGODB_CONNECTION)
-  .then(() => {
-    console.log("connecting to mongodb...");
+  .connect(process.env.MONGODB_CONNECTION, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
   })
-  .catch((e) => {
-    console.log(e);
+  .then(() => {
+    console.log("Connected to MongoDB...");
+  })
+  .catch((error) => {
+    console.error("Error connecting to MongoDB:", error);
   });
 
 // middlewares
