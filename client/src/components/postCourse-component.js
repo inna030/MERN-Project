@@ -51,7 +51,7 @@ const PostCourseComponent = (props) => {
           <p>Only instructors can publish new courses. </p>
         </div>
       )}
-      {currentUser && currentUser.user.role == "instructor" && (
+      {currentUser && currentUser.user.role === "instructor" && (
         <div className="form-group">
           <label for="exampleforTitle">Course title:</label>
           <input

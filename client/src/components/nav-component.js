@@ -5,7 +5,9 @@ import AuthService from "../services/auth.service";
 const NavComponent = ({ currentUser, setCurrentUser }) => {
   const handleLogout = () => {
     AuthService.logout(); // Clear local storage
-    window.alert("Logout successful! Now you will be directed to the homepage.");
+    window.alert(
+      "Logout successful! Now you will be directed to the homepage."
+    );
     setCurrentUser(null);
   };
 
@@ -58,14 +60,14 @@ const NavComponent = ({ currentUser, setCurrentUser }) => {
                   </li>
                 )}
 
-                {currentUser && currentUser.user.role == "instructor" && (
+                {currentUser && currentUser.user.role === "instructor" && (
                   <li className="nav-item">
                     <Link className="nav-link" to="/postCourse">
                       Add new course
                     </Link>
                   </li>
                 )}
-                {currentUser && currentUser.user.role == "student" && (
+                {currentUser && currentUser.user.role === "student" && (
                   <li className="nav-item">
                     <Link className="nav-link" to="/enroll">
                       Register for a course
