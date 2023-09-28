@@ -9,6 +9,7 @@ const passport = require("passport");
 require("./config/passport")(passport);
 const cors = require("cors");
 const path = require("path");
+const port = process.env.PORT || 8080;
 // 連結MongoDB
 mongoose
   .connect(process.env.MONGODB_CONNECTION)
@@ -40,6 +41,6 @@ if (
     res.sendFile(path.join(__dirname, "client", "build", "index.html"));
   });
 }
-app.listen(8080, () => {
+app.listen(port, () => {
   console.log("Backend is listening to port 8080...");
 });
